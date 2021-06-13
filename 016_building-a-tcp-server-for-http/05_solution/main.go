@@ -30,6 +30,10 @@ func handle(conn net.Conn) {
 	request(conn)
 }
 
+/*
+This parsing is done on basis of RFC HTTP standards,
+which says first line in Request should contains Method Name , URI(If any)
+*/
 func request(conn net.Conn) {
 	i := 0
 	scanner := bufio.NewScanner(conn)
@@ -37,7 +41,7 @@ func request(conn net.Conn) {
 		ln := scanner.Text()
 		fmt.Println(ln)
 		if i == 0 {
-			mux(conn, ln)
+			mux(conn, ln) /* Since first line this has to contain Method and URL */
 		}
 		if ln == "" {
 			// headers are done
