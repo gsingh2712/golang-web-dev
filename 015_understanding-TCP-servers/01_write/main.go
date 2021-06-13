@@ -8,6 +8,14 @@ import (
 )
 
 func main() {
+	/*
+		Opens Tcp connection --> net.Listen("tcp", ":8080")
+
+		In another terminel type 'telnet localhost 8080'  to see the messages
+		It will be like accepting the connection ---> li.Accept() => Given connection
+
+		Once you have connection you can write to it.
+	*/
 	li, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatalln(err)

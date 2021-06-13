@@ -8,6 +8,10 @@ import (
 )
 
 func main() {
+	/*
+	  Use telnet localhost 8080
+	  to connect to this host
+	*/
 	li, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatalln(err)

@@ -12,7 +12,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	defer li.Close()
+	defer li.Close() // defered close -> When main functions this clos() is executed
 
 	for {
 		conn, err := li.Accept()

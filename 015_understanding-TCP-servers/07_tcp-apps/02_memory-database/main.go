@@ -10,6 +10,11 @@ import (
 )
 
 func main() {
+	/*
+	  This 'net.Listen(..)' opens a connection and is listening to it 
+	  To participate in this connection run 'telnet localhost 8080'
+	  in another terminal to particapate in this terminal
+	*/
 	li, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatalln(err)
@@ -29,6 +34,10 @@ func main() {
 func handle(conn net.Conn) {
 	defer conn.Close()
 
+	/*
+	  io.WriteString accpets write(...) (an interface) and connection implements that interface
+	  and hence can be sent to function
+	*/
 	// instructions
 	io.WriteString(conn, "\r\nIN-MEMORY DATABASE\r\n\r\n"+
 		"USE:\r\n"+
