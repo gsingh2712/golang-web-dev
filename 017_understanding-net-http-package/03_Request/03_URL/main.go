@@ -10,13 +10,16 @@ import (
 type hotdog int
 
 func (m hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
-	err := req.ParseForm()
+	err := req.ParseForm() // Parse the request
 	if err != nil {
 		log.Fatalln(err)
 	}
 
+	/*
+		Creating and Struct and assigning it values post parsing the request
+	*/
 	data := struct {
-		Method      string
+		Method      string // Check how these are referenced in index.html
 		URL         *url.URL
 		Submissions url.Values
 	}{

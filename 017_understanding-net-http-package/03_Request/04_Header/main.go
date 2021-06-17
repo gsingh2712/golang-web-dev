@@ -19,7 +19,7 @@ func (m hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		Method      string
 		URL         *url.URL
 		Submissions map[string][]string
-		Header      http.Header
+		Header      http.Header // Check how Header a map is referenced in index.html
 	}{
 		req.Method,
 		req.URL,
