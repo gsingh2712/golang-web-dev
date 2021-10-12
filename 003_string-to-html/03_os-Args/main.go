@@ -27,16 +27,21 @@ func main() {
 		</html>
 	`)
 
-	nf, err := os.Create("index.html")
+	nf, err := os.Create("index.html") // Returns a Pointer to File created
 	if err != nil {
 		log.Fatal("error creating file", err)
 	}
 	defer nf.Close()
 
+	/*
+		strings.NewReader(str) returns a new Reader reading from 'str'
+	*/
 	io.Copy(nf, strings.NewReader(str))
 }
 
 /*
 at the terminal:
-go run main.go Todd
+1 go run main.go Gary
+2 open index.html
+
 */

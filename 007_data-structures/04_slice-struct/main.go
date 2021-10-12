@@ -39,12 +39,12 @@ func main() {
 		Motto: "Love all",
 	}
 
-	muhammad := sage{
-		Name:  "Muhammad",
-		Motto: "To overcome evil with good is good, to resist evil by evil is evil.",
+	savarkar := sage{
+		Name:  "Savarkar",
+		Motto: "What is vision of Hindu Rashtra",
 	}
 
-	sages := []sage{buddha, gandhi, mlk, jesus, muhammad}
+	sages := []sage{buddha, gandhi, mlk, jesus, savarkar}
 
 	err := tpl.Execute(os.Stdout, sages)
 	if err != nil {

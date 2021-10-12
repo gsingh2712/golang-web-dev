@@ -30,7 +30,19 @@ var fm = template.FuncMap{
 	"ft": firstThree,
 }
 
+/*
+How to pass functions to a template,
+you need Funcs(...) in template to pass fuctions to template even before pasring tpl.gohtml
+*/
+
 func init() {
+	/*
+		Check tpl.gohtml,  funcs (uc, ft) has to be  given to template before
+		Parsing the tpl.gohtml ,
+		1. Get a new Template using template.New("").
+		2. Use the new template to pass funcs to it.
+		3. Then call the ParseFiles function using it.
+	*/
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
 }
 
@@ -41,6 +53,10 @@ func firstThree(s string) string {
 	}
 	return s
 }
+
+/*
+How to pass functions to a template
+*/
 
 func main() {
 

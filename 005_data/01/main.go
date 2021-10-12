@@ -6,6 +6,13 @@ import (
 	"text/template"
 )
 
+/*
+Shows how to pass data to a template to File containing  Placeholder --> {{.}}
+
+Dot here refers to the current value of the Data at that point of time in execution
+
+*/
+
 var tpl *template.Template
 
 func init() {

@@ -13,8 +13,11 @@ func init() {
 }
 
 func main() {
+	/*
+		Check tpl.gohtml to find how it parses '.'
+	*/
 
-	sages := []string{"Gandhi", "MLK", "Buddha", "Jesus", "Muhammad"}
+	sages := []string{"Krishna", "Buddha", "Jesus", "Savarkar", "MLK"}
 
 	err := tpl.Execute(os.Stdout, sages)
 	if err != nil {

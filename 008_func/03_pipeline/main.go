@@ -10,6 +10,10 @@ import (
 var tpl *template.Template
 
 func init() {
+	/*
+		Check tpl.gohtml , it shows pipelining of functions
+		Example --> {{. | fdbl | fsq | fsqrt}}
+	*/
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
 }
 

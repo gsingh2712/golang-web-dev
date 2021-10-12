@@ -18,7 +18,9 @@ func init() {
 }
 
 func main() {
-
+	/*
+	   Check tpl.gohtml to see how struct members are referenced in tpl.gohtml
+	*/
 	buddha := sage{
 		Name:  "Buddha",
 		Motto: "The belief of no beliefs",

@@ -22,7 +22,6 @@ func main() {
 
 		// write to connection
 		io.WriteString(conn, "I see you connected.")
-
 		conn.Close()
 	}
 }

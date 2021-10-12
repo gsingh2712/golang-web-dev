@@ -20,6 +20,9 @@ func init() {
 
 func main() {
 
+	/*
+		Check
+	*/
 	u1 := user{
 		Name:  "Buddha",
 		Motto: "The belief of no beliefs",

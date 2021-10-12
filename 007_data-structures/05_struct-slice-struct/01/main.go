@@ -64,6 +64,9 @@ func main() {
 		Wisdom:    sages,
 		Transport: cars,
 	}
+	/*
+		Great example on how to range over slices in tpl.gohtml
+	*/
 
 	err := tpl.Execute(os.Stdout, data)
 	if err != nil {

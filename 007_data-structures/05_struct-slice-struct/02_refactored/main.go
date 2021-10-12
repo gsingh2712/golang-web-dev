@@ -52,9 +52,12 @@ func main() {
 		Doors:        4,
 	}
 
-	sages := []sage{b, g, m}
+	sages := []sage{b, g, m} // creating a slice
 	cars := []car{f, c}
 
+	/*
+		Better Refractoring
+	*/
 	data := struct {
 		Wisdom    []sage
 		Transport []car
